@@ -5,7 +5,7 @@ using UnityEngine;
 public class frailBase : MonoBehaviour
 {
     public Rigidbody2D pcRigidBody;
-    float speed = 30f;
+    float speed = 10f;
 
     // Start is called before the first frame update
     void Start()
