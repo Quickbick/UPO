@@ -5,7 +5,9 @@ using UnityEngine;
 public class frailBase : MonoBehaviour
 {
     public Rigidbody2D pcRigidBody;
+    public Animator Animator;
     float speed = 10f;
+    int direction = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -24,5 +26,15 @@ public class frailBase : MonoBehaviour
         
         // Moves the character according to existing vectors
         pcRigidBody.MovePosition(transform.position + playerInput * Time.deltaTime * speed);
+        Animator.SetFloat("Movement_Horizontal", System.Math.Abs(playerInput.x));
+        // Adjusts Direction of Model
+        if (direction == 1 && playerInput.x < 0){
+            gameObject.transform.Rotate(new Vector3(0,180,0));
+            direction = 0;
+        }
+        else if (direction == 0 && playerInput.x > 0){
+            gameObject.transform.Rotate(new Vector3(0,180,0));
+            direction = 1;
+        }
     }
 }
