@@ -584,6 +584,10 @@ PrefabInstance:
       propertyPath: Animator
       value: 
       objectReference: {fileID: 1054705959}
+    - target: {fileID: 8943529464692335793, guid: b3a5dee623aaffa4e97cfe661e60b503, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 8943529464692335795, guid: b3a5dee623aaffa4e97cfe661e60b503, type: 3}
       propertyPath: m_Size.x
       value: 0.6795082
