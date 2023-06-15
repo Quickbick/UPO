@@ -50,6 +50,9 @@ public class frailBase : MonoBehaviour
 
     //for collision with ground
     void OnCollisionEnter2D(Collision2D col){
-        grounded = true;
+        if (col.gameObject.tag == "Floor"){
+            grounded = true;
+        }
+        
     }
 }
