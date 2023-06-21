@@ -27,6 +27,7 @@ public class frailBase : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && grounded == true){
             pcRigidBody.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
             grounded = false;
+            Animator.SetTrigger("Jump");
         }
 
         //store player input as movement vector
@@ -52,6 +53,7 @@ public class frailBase : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col){
         if (col.gameObject.tag == "Floor"){
             grounded = true;
+            Animator.SetTrigger("Hit_Ground");
         }
         
     }
