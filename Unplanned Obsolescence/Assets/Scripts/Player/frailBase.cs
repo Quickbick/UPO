@@ -11,11 +11,14 @@ public class frailBase : MonoBehaviour
     float jumpAmount = 10f;
     int direction = 1;
 
+    private float lastY;
+
     // Start is called before the first frame update
     void Start()
     {
         //get rigidBody from gameObject
         pcRigidBody = GetComponent<Rigidbody2D>();
+        lastY = transform.position.y;
     }
 
     // Update is called once per frame
@@ -30,6 +33,16 @@ public class frailBase : MonoBehaviour
             Animator.SetTrigger("Jump");
         }
 
+        //checks for falling
+        float currentY = transform.position.y;
+        if (currentY + 0.01 < lastY){
+            Animator.SetTrigger("Fall");
+        }
+        if (currentY + 0.05 < lastY){
+            Animator.SetTrigger("Fall_Big");
+        }
+        lastY = currentY;
+        
         //store player input as movement vector
         playerInput = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
         
