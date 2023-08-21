@@ -1,0 +1,28 @@
+## 1. Base Functions
+[X]Frail Model
+  [X]New Animation System
+[X]Frail Running
+[X]Frail Jumping
+[]Basic Attacks
+  []Standing Attack
+  []Running Attack
+  []Jumping Attack
+[]Basic Parry
+  []Standing Parry
+  []Running Parry
+  []Air Parry
+  []Parry Succeed Visual Cue
+[]UI
+  []Damage Indicator
+
+## 2. Initial Level
+[]Level Map
+[]Level Models/Assets
+  []Box Mimic
+  []Box Knight
+  []Forklift Jouster
+  []Cord Wizard
+
+## 3. First Bossfight
+[]Room
+[]Boss
